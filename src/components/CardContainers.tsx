@@ -9,24 +9,26 @@ interface Producto {
   id: number;
   nombre: string;
   precio: number;
-  imagen: string;
+  precioAnterior?: number;
+  imagenes: string[];
   categoria: Categoria;
 }
 
-interface ProductosContainer {
+interface ProductosContainerProps {
   productos: Producto[];
 }
 
-export const CardContainers = ({ productos }: ProductosContainer) => {
+export const CardContainers = ({ productos }: ProductosContainerProps) => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:pl-14 pl-0.5">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 px-2 sm:px-6 mt-6">
       {productos.map((p) => (
         <Card
           key={p.id}
           id={p.id}
           nombre={p.nombre}
           precio={p.precio}
-          imagen={p.imagen}
+          precioAnterior={p.precioAnterior}
+          imagenes={p.imagenes}
           categoria={p.categoria.nombre}
         />
       ))}

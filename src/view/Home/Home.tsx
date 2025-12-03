@@ -1,11 +1,14 @@
+import { BlackFriday } from "../../components/BlackFriday";
 import { Encabezado } from "../../components/Encabezado";
-
-import { ScrollingImages } from "../../components/ScrollingImages";
+import { NuevosProductos } from "../../components/NuevosProductos";
+import { ScrollingText } from "../../components/ScrollingText";
 export const Home = () => {
   return (
     <div>
       <Encabezado></Encabezado>
-      <ScrollingImages></ScrollingImages>
+      <ScrollingText text="VENTA POR MAYOR Y MENOR — PRECIOS COMPETITIVOS — CALIDAD GARANTIZADA"></ScrollingText>
+      <NuevosProductos></NuevosProductos>
+      <BlackFriday></BlackFriday>
     </div>
   );
 };
