@@ -2,11 +2,19 @@ export type Producto = {
   id: number;
   nombre: string;
   precio: number;
-  descuento: number;
-  imagen: string;
-  imagen2?: string;
+  precioAnterior?: number;
+
   descripcion: string;
-  stock: number;
-  link: string;
-  categoria: string;
+
+  talles: string[];
+  colores: string[];
+
+  imagenes: string[];
+
+  categoria: {
+    id: number;
+    nombre: string;
+  };
+
+  tags?: string[];
 };

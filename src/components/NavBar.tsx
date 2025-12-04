@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search, User, ShoppingCart } from "lucide-react";
 import { CartSidebar } from "./CartSidebar";
@@ -7,46 +7,32 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const [show, setShow] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY) setShow(false);
-      else setShow(true);
-
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
   return (
     <header
-      className={`
+      className="
         fixed top-0 left-0 right-0 z-50
-        bg-black h-[85px]
+        bg-black h-[var(--nav-height)]
         flex items-center justify-between
-        px-6 md:px-12
-        transition-transform duration-500
-        ${show ? "translate-y-0" : "-translate-y-full"}
-      `}
+        px-4 md:px-12
+        shadow-lg border-b border-gray-600/60 
+      "
     >
       {/* LOGO */}
       <div className="flex items-center">
-        <img
-          src="/sunset.png"
-          alt="Sunset Logo"
-          className="w-[140px] object-contain select-none"
-        />
+        <Link to="/">
+          <img
+            src="/sunset.png"
+            alt="Sunset Logo"
+            className="w-[140px] object-contain select-none"
+          />
+        </Link>
       </div>
 
       {/* LINKS DESKTOP */}
       <nav className="hidden md:flex items-center gap-10 ml-10 text-white tracking-wider uppercase font-semibold text-sm">
         <NavItem to="/inicio" label="Inicio" />
         <NavItem to="/productos" label="Productos" />
-        <NavItem to="/sobre-nosotros" label="Sobre Nosotros" />
+
         <NavItem to="/contacto" label="Contacto" />
       </nav>
 
@@ -60,23 +46,24 @@ export const NavBar = () => {
         />
       </div>
 
-      {/* MENU MOBILE BUTTON */}
+      {/* MENU MOBILE */}
       <button
-        className="md:hidden flex flex-col gap-1.5"
+        className="md:hidden flex flex-col gap-1.5 z-[1100]"
         onClick={() => setIsOpen(true)}
+        aria-label="Abrir menú"
       >
         <span className="w-7 h-[3px] bg-white"></span>
         <span className="w-7 h-[3px] bg-white"></span>
         <span className="w-7 h-[3px] bg-white"></span>
       </button>
 
-      {/* MOBILE MENU */}
+      {/* DRAWER MOBILE */}
       <div
         className={`
           fixed top-0 right-0 h-screen w-[70%] max-w-[260px]
           bg-black text-white flex flex-col 
-          p-8 pt-24 gap-6 tracking-wide uppercase
-          transform transition-transform duration-300 z-[1050]
+          p-8 pt-[calc(var(--nav-height)+16px)] gap-6 tracking-wide uppercase
+          transform transition-transform duration-300 z-[1200]
           ${isOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
@@ -101,7 +88,6 @@ export const NavBar = () => {
           onClick={() => setIsOpen(false)}
         />
 
-        {/* CARRITO */}
         <button
           onClick={() => {
             setIsOpen(false);
@@ -116,9 +102,9 @@ export const NavBar = () => {
       {/* OVERLAY */}
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-screen h-screen bg-black/60 z-[1040]"
+          className="fixed inset-0 bg-black/60 z-[1150]"
           onClick={() => setIsOpen(false)}
-        ></div>
+        />
       )}
 
       {/* SIDEBAR CARRITO */}
@@ -127,7 +113,7 @@ export const NavBar = () => {
   );
 };
 
-/* ---------------- COMPONENTES DE NAV ---------------- */
+/* ---------------- COMPONENTES ---------------- */
 
 const NavItem = ({ to, label }: { to: string; label: string }) => (
   <Link

@@ -37,7 +37,7 @@ export const Contacto = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Título + CTA */}
         <div className="text-center mb-12">
-          <h2 className="text-red-700 font-[HeadlinesRegular] text-5xl md:text-6xl mb-4">
+          <h2 className="text-white font-[HeadlinesRegular] text-5xl md:text-6xl mb-4">
             Contacto
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -51,9 +51,10 @@ export const Contacto = () => {
           <div className="flex-1 flex flex-col gap-6">
             <div>
               <h3 className="text-2xl font-semibold mb-2">Información</h3>
-              <p>📞 3794-158714</p>
-              <p>📧 zentrepuestos@gmail.com</p>
-              <p>📍 Av. El Maestro, W3400 Corrientes, Argentina</p>
+              <p>📞 xxxx-xxxxxx</p>
+
+              <p>📍 Av. Ferre 1887, W3400 Corrientes, Argentina</p>
+              <p>📍 Brunel Pruyas, Caa Cati, Corrientes, Argentina</p>
             </div>
 
             <div>
@@ -63,7 +64,7 @@ export const Contacto = () => {
             </div>
 
             <a
-              href="https://wa.me/5493794158714"
+              href="https://api.whatsapp.com/message/SAYLQKIJFNR4K1?autoload=1&app_absent=0&utm_source=ig"
               target="_blank"
               className="inline-block mt-4 bg-green-600 hover:bg-green-700 
                          text-white font-bold py-3 px-6 rounded-lg shadow-md transition"
@@ -72,7 +73,7 @@ export const Contacto = () => {
             </a>
             <div className="w-full h-72 md:h-96 rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.155214479976!2d-58.82947952373956!3d-27.495547917809493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b8032562ac5%3A0xb06718be45f3f1f0!2sAv.%20El%20Maestro%2C%20W3400%20Corrientes!5e0!3m2!1ses-419!2sar!4v1758252146277!5m2!1ses-419!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.763282706094!2d-58.830352723740155!3d-27.476628017002938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b61f5f8ddb5%3A0x8b7978b351b1b99b!2sAv.%20Pedro%20Ferr%C3%A9%201887%2C%20W3402%20Corrientes!5e0!3m2!1ses-419!2sar!4v1764861147482!5m2!1ses-419!2sar%22%20width=%22600%22%20height=%22450%22%20style=%22border:0;%22%20allowfullscreen=%22%22%20loading=%22lazy%22%20referrerpolicy=%22no-referrer-when-downgrade"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

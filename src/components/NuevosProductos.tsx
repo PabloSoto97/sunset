@@ -16,7 +16,7 @@ export const NuevosProductos = () => {
 
         {/* 🔥 LINK estilo Imouri */}
         <Link
-          to="/catalogo"
+          to="/productos"
           className="
             relative inline-block
             text-pink-500 
