@@ -77,11 +77,7 @@ export const NavBar = () => {
           label="Productos"
           onClick={() => setIsOpen(false)}
         />
-        <NavMobileItem
-          to="/sobre-nosotros"
-          label="Sobre Nosotros"
-          onClick={() => setIsOpen(false)}
-        />
+
         <NavMobileItem
           to="/contacto"
           label="Contacto"

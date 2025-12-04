@@ -27,12 +27,7 @@ export const Footer = () => {
               >
                 Productos
               </Link>
-              <Link
-                to="/sobre-nosotros"
-                className="mb-3 font-semibold text-gray-900 uppercase dark:text-white"
-              >
-                Conócenos Más
-              </Link>
+
               <Link
                 to="/contacto"
                 className="mb-3 font-semibold text-gray-900 uppercase dark:text-white"
