@@ -49,11 +49,11 @@ export const Contacto = () => {
   const isSending = status === "sending";
 
   return (
-    <section className="py-20 md:py-32 bg-zinc-900 text-white min-h-screen">
+    <section className="py-20 md:py-32 bg-black text-white min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         {/* TÍTULO Y DESCRIPCIÓN */}
         <div className="text-center mb-16">
-          <h2 className="text-pink-400 font-extrabold text-4xl sm:text-5xl md:text-6xl mb-4 tracking-tight">
+          <h2 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl mb-4 tracking-tight">
             ¿Hablamos?
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ export const Contacto = () => {
           <div className="lg:col-span-1 space-y-8">
             {/* Tarjeta de Información */}
             <div className="p-6 bg-zinc-800 rounded-xl shadow-xl border border-pink-500/10 transition hover:border-pink-500/50">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-pink-400">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-pink-600">
                 <Mail size={24} /> Contacto Directo
               </h3>
               <div className="space-y-3 text-gray-300">
@@ -134,7 +134,7 @@ export const Contacto = () => {
             onSubmit={handleSubmit}
             className="lg:col-span-2 flex flex-col p-8 md:p-10 rounded-2xl bg-zinc-800 shadow-2xl border border-pink-500/20"
           >
-            <h3 className="text-3xl font-bold mb-8 text-pink-400">
+            <h3 className="text-3xl font-bold mb-8 text-pink-600">
               Envíanos un Mensaje
             </h3>
 
