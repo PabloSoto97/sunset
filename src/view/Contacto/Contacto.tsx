@@ -52,7 +52,7 @@ export const Contacto = () => {
     <section className="py-20 md:py-32 bg-black text-white min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         {/* TÍTULO Y DESCRIPCIÓN */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 pt-4 md:pt-2">
           <h2 className="text-white font-extrabold text-4xl sm:text-5xl md:text-6xl mb-4 tracking-tight">
             ¿Hablamos?
           </h2>
